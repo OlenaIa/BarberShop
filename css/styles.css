@@ -1,0 +1,116 @@
+:root {
+    --main-text-font: 'Open Sans', sans-serif;
+    --main-background-color: #FFFFFF;
+    --dark-background-color: rgba(25, 28, 38, 0.2);
+    --header-title-button-text-dark-section: #FFFFFF;
+    --accent-color: #FF6C00;
+    --title-and-dark-button: #303030;
+    --sub-dark-section: #9DA4BD;
+    --sup-dark-section: rgba(157, 164, 189, 0.6);
+
+}
+
+body {
+    background-color: var(--main-background-color);
+    font-family: var(--main-text-font);
+
+}
+
+/* Зкидання маркерів */
+
+.list {
+    list-style: none;
+}
+
+/* Зкидання підкреслень */
+
+.list a {
+    text-decoration: none;
+}
+
+/* ======Хедер====== */
+
+.header-page {
+background-color: var(--dark-background-color);
+}
+
+.menu a,
+.phone {
+    color: var(--header-title-button-text-dark-section);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+}
+
+.phone {
+    text-decoration: none;
+}
+
+.menu a:hover,
+.menu a:focus {
+    color: var(--accent-color);
+}
+
+/* Кнопка */
+
+.btn {
+    color: var(--header-title-button-text-dark-section-text-color);
+    background-color: inherit;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.09em;
+}
+
+/* ======== HERO ========== */
+
+.hero {
+    background-color: var(--dark-background-color);
+}
+.net-menu a {
+    color: var(--title-and-dark-button);
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.2em;
+}
+
+.net-menu a:hover,
+.net-menu a:focus {
+    color: var(--accent-color);
+}
+
+.sup-title {
+    color: var(--sup-dark-section);
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.hero-title {
+    color: var(--header-title-button-text-dark-section);
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 1.18;
+    letter-spacing: 0.05em;
+}
+
+.sub-text {
+    color: var(--sub-dark-section);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+}
+
+.back-and-forward a {
+    color: var(--header-title-button-text-dark-section);
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+}
