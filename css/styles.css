@@ -55,7 +55,6 @@ background-color: var(--dark-background-color);
 
 .btn {
     color: var(--header-title-button-text-dark-section);
-    background-color: inherit;
     font-family: inherit;
     font-weight: 600;
     font-size: 12px;
@@ -148,4 +147,26 @@ background-color: var(--dark-background-color);
 
 .about-btn {
     color: var(--title-and-dark-button);
+}
+
+/* ====== PRICES ======== */
+
+.prices {
+    background-color: var(--dark-background-color);
+}
+
+.prices-sup {
+    color: var(--sup-dark-section);
+}
+
+.price-title {
+    color: var(--header-title-button-text-dark-section);
+}
+
+.prices-table {
+    color: var(--sub-dark-section);
+}
+
+.about-btn {
+    color: var(--header-title-button-text-dark-section);
 }
