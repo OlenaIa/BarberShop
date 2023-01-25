@@ -1,5 +1,6 @@
 :root {
     --main-text-font: 'Open Sans', sans-serif;
+    --title-text-font: 'Raleway', sans-serif;
     --main-background-color: #FFFFFF;
     --dark-background-color: rgba(25, 28, 38, 0.2);
     --header-title-button-text-dark-section: #FFFFFF;
@@ -7,7 +8,7 @@
     --title-and-dark-button: #303030;
     --sub-dark-section: #9DA4BD;
     --sup-dark-section: rgba(157, 164, 189, 0.6);
-
+    --text-light-sections: #555555;
 }
 
 body {
@@ -17,13 +18,11 @@ body {
 }
 
 /* Зкидання маркерів */
-
 .list {
     list-style: none;
 }
 
 /* Зкидання підкреслень */
-
 .list a {
     text-decoration: none;
 }
@@ -55,13 +54,14 @@ background-color: var(--dark-background-color);
 /* Кнопка */
 
 .btn {
-    color: var(--header-title-button-text-dark-section-text-color);
+    color: var(--header-title-button-text-dark-section);
     background-color: inherit;
     font-family: inherit;
     font-weight: 600;
     font-size: 12px;
     line-height: 1.33;
     letter-spacing: 0.09em;
+    text-transform: uppercase;
 }
 
 /* ======== HERO ========== */
@@ -82,14 +82,15 @@ background-color: var(--dark-background-color);
     color: var(--accent-color);
 }
 
-.sup-title {
-    color: var(--sup-dark-section);
+.sup-text {
     font-weight: 600;
     font-size: 11px;
     line-height: 1.36;
-    letter-spacing: 0.1em;
     text-transform: uppercase;
 }
+
+.hero-sup {
+    color: var(--sup-dark-section);
 
 .hero-title {
     color: var(--header-title-button-text-dark-section);
@@ -100,11 +101,14 @@ background-color: var(--dark-background-color);
 }
 
 .sub-text {
-    color: var(--sub-dark-section);
     font-weight: 400;
     font-size: 18px;
     line-height: 1.67;
     letter-spacing: 0.02em;
+}
+
+.hero-sub {
+    color: var(--sub-dark-section);
 }
 
 .back-and-forward a {
@@ -113,4 +117,34 @@ background-color: var(--dark-background-color);
     font-size: 11px;
     line-height: 1.36;
     letter-spacing: 0.1em;
+}
+
+/* ======= ABOUT ======== */
+
+.about-sup {
+    color: var(--title-and-dark-button);
+}
+
+.secondary-title {
+    color: var(--title-and-dark-button);
+    font-style: var(--title-text-font);
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.17;
+    letter-spacing: 0.05em;
+}
+
+.about-sub {
+    color: var(--text-light-sections);
+}
+
+.text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.86;
+    letter-spacing: 0.02em;
+}
+
+.about-btn {
+    columns: var(--title-and-dark-button);
 }
