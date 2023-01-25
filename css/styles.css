@@ -3,6 +3,7 @@
     --title-text-font: 'Raleway', sans-serif;
     --main-background-color: #FFFFFF;
     --dark-background-color: rgba(25, 28, 38, 0.2);
+    --grey-background-color: #F7F7F7;
     --header-title-button-text-dark-section: #FFFFFF;
     --accent-color: #FF6C00;
     --title-and-dark-button: #303030;
@@ -169,4 +170,64 @@ background-color: var(--dark-background-color);
 
 .about-btn {
     color: var(--header-title-button-text-dark-section);
+}
+
+/* ====== WHY WE ======= */
+
+.why-list {
+    color: var(--title-and-dark-button);
+    background-color: var(--grey-background-color);
+}
+
+.number {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.17x;
+    letter-spacing: 0.05em;
+}
+
+.descrip {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+}
+
+.why-sup {
+    color: var(--title-and-dark-button);
+}
+
+.why-sub {
+    color: var(--text-light-sections);
+}
+
+/* ========= TEAM ======== */
+
+.team {
+    background-color: var(--grey-background-color);
+}
+
+.team-sup {
+    color: var(--title-and-dark-button);
+}
+
+.third-title {
+    color: var(--title-and-dark-button);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.39;
+    letter-spacing: 0.02em;
+}
+
+.team-desc {
+    color: var(--accent-color);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.36;
+    letter-spacing: 0.02em;
+}
+
+/* ====== PORTFOLIO ====== */
+
+.portf-sup {
+    color: var(--title-and-dark-button);
 }
