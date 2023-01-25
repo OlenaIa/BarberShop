@@ -91,6 +91,7 @@ background-color: var(--dark-background-color);
 
 .hero-sup {
     color: var(--sup-dark-section);
+}
 
 .hero-title {
     color: var(--header-title-button-text-dark-section);
@@ -146,5 +147,5 @@ background-color: var(--dark-background-color);
 }
 
 .about-btn {
-    columns: var(--title-and-dark-button);
+    color: var(--title-and-dark-button);
 }
