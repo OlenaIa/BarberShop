@@ -15,23 +15,75 @@
 body {
     background-color: var(--main-background-color);
     font-family: var(--main-text-font);
-
 }
 
-/* Зкидання маркерів */
+/* Скидання відступів */
+h1, h2, h3, h4, h5, p {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+}
+
+/* Скидання маркерів */
 .list {
     list-style: none;
 }
 
-/* Зкидання підкреслень */
+/* Скидання підкреслень */
 .list a {
     text-decoration: none;
 }
 
-/* ======Хедер====== */
+/* ----------------- Контейнер ------------------ */
+
+.container {
+    width: 1200px;
+    outline: 2px solid green;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ==========Хедер========== */
 
 .header-page {
-background-color: var(--dark-background-color);
+    padding-top: 32px;
+    background-color: var(--dark-background-color);
+}
+
+.header-cntnr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-nav {
+margin-right: auto;
+}
+.menu-nav, 
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 131px;
+}
+
+.menu-item:not(:last-child) {
+    margin-right: 30px;
+}
+.menu-item a,
+.phone {
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .menu a,
@@ -45,6 +97,7 @@ background-color: var(--dark-background-color);
 
 .phone {
     text-decoration: none;
+    margin-right: 40px;
 }
 
 .menu a:hover,
@@ -55,6 +108,13 @@ background-color: var(--dark-background-color);
 /* Кнопка */
 
 .btn {
+    width: 160px;
+    height: 40px;
+    /* padding: 11px 19px;
+    margin-right: 17px; */
+
+    border: 1px solid var(--accent-color);
+    border-radius: 25px;
     color: var(--header-title-button-text-dark-section);
     font-family: inherit;
     font-weight: 600;
@@ -62,13 +122,49 @@ background-color: var(--dark-background-color);
     line-height: 1.33;
     letter-spacing: 0.09em;
     text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: var(--accent-color);
 }
 
 /* ======== HERO ========== */
 
-.hero {
-    background-color: var(--dark-background-color);
+/* .hero {
+    padding-top: 184px;
+    padding-bottom: 49px;
+     
+} */
+
+.hero-cntnr {
+    display: flex;
 }
+
+/* .rot {
+    display: block;
+     transform: rotate(-90deg); 
+} */
+
+.net-menu,
+.back-and-forward {
+    display: flex;
+}
+
+.net-menu {
+    width: 100px;
+}
+.net-item:not(:last-child) {
+    margin-right: 40px;
+}
+
+.net-item a {
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
 .net-menu a {
     color: var(--title-and-dark-button);
     font-weight: 600;
@@ -82,7 +178,15 @@ background-color: var(--dark-background-color);
     color: var(--accent-color);
 }
 
+.ttl-btn-cntnr {
+    background-color: var(--dark-background-color);
+    padding-top: 272px;
+    padding-bottom: 49px;
+    flex-grow: 1;
+}
+
 .sup-text {
+    margin-bottom: 20px;
     font-weight: 600;
     font-size: 11px;
     line-height: 1.36;
@@ -94,6 +198,7 @@ background-color: var(--dark-background-color);
 }
 
 .hero-title {
+    margin-bottom: 20px;
     color: var(--header-title-button-text-dark-section);
     font-weight: 700;
     font-size: 72px;
@@ -109,6 +214,7 @@ background-color: var(--dark-background-color);
 }
 
 .hero-sub {
+    margin-bottom: 144px;
     color: var(--sub-dark-section);
 }
 
@@ -120,13 +226,40 @@ background-color: var(--dark-background-color);
     letter-spacing: 0.1em;
 }
 
+.bf-item {
+    margin-right: 24px;
+}
+
 /* ======= ABOUT ======== */
+
+.about {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.about-cntnr {
+    display: flex;
+}
+
+.about-list {
+    display: flex;
+    margin-right: 30px;
+}
+
+.about-list li:not(:last-child) {
+    margin-right: 30px;
+}
+
+.about-content {
+    margin-right: 100px;
+}
 
 .about-sup {
     color: var(--title-and-dark-button);
 }
 
 .secondary-title {
+    margin-bottom: 20px;
     color: var(--title-and-dark-button);
     font-style: var(--title-text-font);
     font-weight: 700;
@@ -137,13 +270,16 @@ background-color: var(--dark-background-color);
 
 .about-sub {
     color: var(--text-light-sections);
+    margin-bottom: 20px;
 }
 
 .text {
+    margin-bottom: 42px;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.86;
     letter-spacing: 0.02em;
+    color: var(--text-light-sections);
 }
 
 .about-btn {
@@ -153,6 +289,8 @@ background-color: var(--dark-background-color);
 /* ====== PRICES ======== */
 
 .prices {
+    padding-top: 120px;
+    padding-bottom: 120px;
     background-color: var(--dark-background-color);
 }
 
@@ -160,26 +298,64 @@ background-color: var(--dark-background-color);
     color: var(--sup-dark-section);
 }
 
-.price-title {
+.dark-title {
+    margin-bottom: 44px;
     color: var(--header-title-button-text-dark-section);
 }
 
+.tables {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 44px;
+}
+
 .prices-table {
+    flex-basis: calc((100% - 30px) / 2);
     color: var(--sub-dark-section);
 }
 
-.about-btn {
+td:last-child {
+    text-align: end;
+}
+
+.dark-btn {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
     color: var(--header-title-button-text-dark-section);
 }
 
 /* ====== WHY WE ======= */
 
+.why {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.why-cntnr {
+    display: flex;
+}
+
 .why-list {
+    display: flex;
+    margin-right: 130px;
+    width: 370px;
+    flex-wrap: wrap;
+    gap: 30px;
+
     color: var(--title-and-dark-button);
     background-color: var(--grey-background-color);
 }
 
+.why-list li {
+    width: 170px;
+    padding: 20px 24px;
+    text-align: center;
+}
+
 .number {
+    margin-bottom: 6px;
     font-weight: 700;
     font-size: 42px;
     line-height: 1.17x;
@@ -190,6 +366,10 @@ background-color: var(--dark-background-color);
     font-weight: 600;
     font-size: 11px;
     line-height: 1.36;
+}
+
+.why-content {
+margin-right: 101px;
 }
 
 .why-sup {
@@ -203,6 +383,8 @@ background-color: var(--dark-background-color);
 /* ========= TEAM ======== */
 
 .team {
+    padding-top: 120px;
+    padding-bottom: 120px;
     background-color: var(--grey-background-color);
 }
 
@@ -210,7 +392,27 @@ background-color: var(--dark-background-color);
     color: var(--title-and-dark-button);
 }
 
+.team-ttl {
+    margin-bottom: 44px;
+}
+
+.team-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.team-list li {
+    flex-basis: calc((100% - 2*30px) / 3);
+}
+
+.team-content {
+    padding: 30px 82px 0;
+    text-align: center;
+}
+
 .third-title {
+    margin-bottom: 8px;
     color: var(--title-and-dark-button);
     font-weight: 400;
     font-size: 18px;
@@ -219,6 +421,7 @@ background-color: var(--dark-background-color);
 }
 
 .team-desc {
+    margin-bottom: 30px;
     color: var(--accent-color);
     font-weight: 400;
     font-size: 14px;
@@ -226,8 +429,36 @@ background-color: var(--dark-background-color);
     letter-spacing: 0.02em;
 }
 
+.team-netlist {
+    display: flex;
+    gap: 10px;
+    background-color: pink;
+}
+
 /* ====== PORTFOLIO ====== */
 
+.portfolio {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
 .portf-sup {
+    margin-bottom: 44px;
     color: var(--title-and-dark-button);
+}
+
+.portf-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.portf-list li {
+    flex-basis: calc((100% - 4*30px) / 4);
+}
+
+.contacts {
+    background-color: var(--sub-dark-section);
+    padding-top: 130px;
+    padding-bottom: 120px;
 }
