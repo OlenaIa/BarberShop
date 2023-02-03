@@ -457,8 +457,97 @@ margin-right: 101px;
     flex-basis: calc((100% - 4*30px) / 4);
 }
 
-.contacts {
-    background-color: var(--sub-dark-section);
+/* =========== BOOKING & CONTACTS ============= */
+
+.booking-contacts {
+    background-color: #191C26;
     padding-top: 130px;
     padding-bottom: 120px;
+}
+
+.contacts-cntnr {
+    display: flex;
+}
+
+.booking,
+.contacts {
+    flex-grow: 1;
+}
+
+.btn-send {
+    margin: 0;
+}
+
+address {
+    font-style: inherit;
+    margin-bottom: 70px;
+}
+
+.address li:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.address-adrs {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color: var(--sub-dark-section);
+}
+
+.phone-contacts,
+.email,
+.work-hours+p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color: var(--sub-dark-section);
+}
+
+a.email {
+    text-decoration: underline;
+}
+
+.work-hours {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    text-transform: uppercase;
+    color: var(--header-title-button-text-dark-section);
+} 
+
+/* ============= FOOTER ============= */
+
+.footer {
+    padding-top: 56px;
+    padding-bottom: 56px;
+}
+
+.footer-cntnr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-cntnr p {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.2em;
+    color: var(--sub-dark-section);
+}
+
+.footer-list {
+display: flex;
+font-weight: 600;
+font-size: 11px;
+line-height: 1.36;
+letter-spacing: 0.2em;
+color: var(--title-and-dark-button);
+}
+
+.footer-list li:not(:last-child) {
+    margin-right: 40px;
 }
