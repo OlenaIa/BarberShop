@@ -51,6 +51,8 @@ img {
 }
 
 /* ==========Хедер========== */
+/* area-label="" в батомі атрибут без нічого крім іконки 
+в спанах текст, если иконка сломана, с класом visually-hidden и спрятан через ссс*/
 
 .header-page {
     padding-top: 32px;
@@ -64,8 +66,9 @@ img {
 }
 
 .menu-nav {
-margin-right: auto;
+    margin-right: auto;
 }
+
 .menu-nav, 
 .menu {
     display: flex;
@@ -74,6 +77,10 @@ margin-right: auto;
 
 .logo {
     margin-right: 131px;
+}
+
+.logo-svg {
+    fill: #303030;
 }
 
 .menu-item:not(:last-child) {
@@ -179,9 +186,11 @@ margin-right: auto;
 }
 
 .ttl-btn-cntnr {
-    background-color: var(--dark-background-color);
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url("../images/hero.jpg");
+    background-color: gray;
     padding-top: 272px;
     padding-bottom: 49px;
+    padding-left: 100px;
     flex-grow: 1;
 }
 
@@ -191,6 +200,16 @@ margin-right: auto;
     font-size: 11px;
     line-height: 1.36;
     text-transform: uppercase;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.sup-text::before {
+    content: '';
+    width: 60px;
+    height: 1px;
+    background-color: currentColor;
 }
 
 .hero-sup {
@@ -402,12 +421,12 @@ margin-right: 101px;
     gap: 30px;
 }
 
-.team-list li {
+.team-list > li {
     flex-basis: calc((100% - 2*30px) / 3);
 }
 
 .team-content {
-    padding: 30px 82px 0;
+    padding-top: 30px;
     text-align: center;
 }
 
@@ -429,10 +448,30 @@ margin-right: 101px;
     letter-spacing: 0.02em;
 }
 
-.team-netlist {
+.team-net-list {
     display: flex;
+    justify-content: center;
     gap: 10px;
-    background-color: pink;
+}
+
+.team-net-item
+
+.team-net-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px; 
+    background-color: var(--main-background-color);
+    border-radius: 50%;
+}
+
+.net-icon {
+    fill: #303030;
+}
+
+.team-net-link:is(:hover, :focus) .net-icon {
+    fill: var(--accent-color);
 }
 
 /* ====== PORTFOLIO ====== */
@@ -531,6 +570,16 @@ a.email {
     align-items: center;
 }
 
+.ftr-cpr {
+    display: flex;
+    align-items: center;
+}
+
+.ftr-icon {
+    margin-right: 6px;
+    fill: var(--sub-dark-section);
+}
+
 .footer-cntnr p {
     font-weight: 600;
     font-size: 11px;
@@ -538,6 +587,8 @@ a.email {
     letter-spacing: 0.2em;
     color: var(--sub-dark-section);
 }
+
+
 
 .footer-list {
 display: flex;
