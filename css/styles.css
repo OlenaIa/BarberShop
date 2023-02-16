@@ -45,18 +45,20 @@ img {
 
 .container {
     width: 1200px;
-    outline: 2px solid green;
     margin: 0 auto;
     padding: 0 15px;
 }
 
 /* ==========Хедер========== */
+
 /* area-label="" в батомі атрибут без нічого крім іконки 
 в спанах текст, если иконка сломана, с класом visually-hidden и спрятан через ссс*/
 
 .header-page {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
     padding-top: 32px;
-    background-color: var(--dark-background-color);
 }
 
 .header-cntnr {
@@ -102,6 +104,10 @@ img {
     letter-spacing: 0.1em;
 }
 
+.menu a {
+transition: color 500ms;
+}
+
 .phone {
     text-decoration: none;
     margin-right: 40px;
@@ -131,6 +137,12 @@ img {
     letter-spacing: 0.09em;
     text-transform: uppercase;
     cursor: pointer;
+
+    transition: background-color 500ms;
+}
+
+.header-btn {
+    margin-right: 17px;
 }
 
 .btn:hover,
@@ -150,11 +162,24 @@ img {
     display: flex;
 }
 
-.net-menu,
-.back-and-forward {
+.hero-net-menu-overlay {
+    position: relative;
+    width: 155px;
+}
+
+
+.net-menu {
     display: flex;
     gap: 40px;
     align-items: center;
+}
+
+.hero-net-menu {
+    position: absolute;
+    bottom: 0;
+    left: 34.5px;
+    transform-origin: center left;
+    transform: translatey(50%) rotate(-90deg);
 }
 
 .net-item:first-child {
@@ -182,6 +207,8 @@ img {
     font-size: 11px;
     line-height: 1.36;
     letter-spacing: 0.2em;
+
+    transition: color 500ms;
 }
 
 .net-menu a:hover,
@@ -190,12 +217,50 @@ img {
 }
 
 .ttl-btn-cntnr {
+    position: relative;
     background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url("../images/hero.jpg");
     background-color: gray;
     padding-top: 272px;
     padding-bottom: 49px;
     padding-left: 100px;
     flex-grow: 1;
+}
+
+.ttl-btn-cntnr::before {
+    position: absolute;
+    top: calc(50% + 1px);
+    right: 20px;
+    content: "";
+    display: block;
+    width: 8px;
+    height: 2px;
+    background-color: #9DA4BD;
+}
+
+.ttl-btn-cntnr::after {
+    position: absolute;
+    top: calc(50% + 13px);
+    right: 20px;
+    content: "";
+    display: block;
+    width: 8px;
+    height: 2px;
+    background-color: #9DA4BD;
+}
+
+.ttl-cntnr {
+    margin-bottom: 144px;
+}
+
+.ttl-cntnr::before {
+    position: absolute;
+    top: calc(50% - 13px);
+    right: 20px;
+    content: "";
+    display: block;
+    width: 18px;
+    height: 2px;
+    background-color: #fff;
 }
 
 .sup-text {
@@ -237,19 +302,31 @@ img {
 }
 
 .hero-sub {
-    margin-bottom: 144px;
     color: var(--sub-dark-section);
 }
 
-.bf-item::after {
+.btn-cntnr {
+    display: flex;
+}
+
+.back-and-forward {
+    display: flex;
+    gap: 64px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.bf-link::after {
     content: '';
     width: 60px;
     height: 1px;
     display: block;
+    margin-top: 8px;
     background-color: rgba(157, 164, 189, 0.6);
 }
 
-.back-and-forward a {
+.bf-link {
     color: var(--header-title-button-text-dark-section);
     font-weight: 600;
     font-size: 11px;
@@ -257,8 +334,8 @@ img {
     letter-spacing: 0.1em;
 }
 
-.bf-item {
-    margin-right: 24px;
+.bf-item:last-child {
+    text-align: end;
 }
 
 /* ======= ABOUT ======== */
@@ -409,6 +486,7 @@ td:last-child {
 }
 
 .why-list li {
+    position: relative;
     width: 170px;
     height: 133px;
     padding: 20px 24px;
@@ -424,17 +502,23 @@ td:last-child {
     margin-bottom: 6px;
     font-weight: 700;
     font-size: 42px;
-    line-height: 1.17x;
+    line-height: 1.17;
     letter-spacing: 0.05em;
 }
 
-.number::after {
+.why-list li::before {
+    position: absolute;
+    top: 27px;
+    right: 39px;
     content: "+";
+    display: block;
+    width: 13px;
     font-weight: 600;
     font-size: 16px;
-    line-height: 1.37;
+    line-height: 1.375;
     color: #FF6C00;
 }
+
 
 .descrip {
     font-weight: 600;
@@ -524,6 +608,7 @@ padding-top: 9px;
 
 .net-icon {
     fill: #303030;
+    transition: fill 500ms;
 }
 
 .team-net-link:is(:hover, :focus) .net-icon {
@@ -646,6 +731,7 @@ a.email {
 .footer {
     padding-top: 56px;
     padding-bottom: 56px;
+    background-color: #F7F7F7;
 }
 
 .footer-cntnr {
