@@ -39,7 +39,7 @@
           </ul>
         </nav>
         <a href="tel:+380441111111" class="phone">+38 044 111 11 11</a>
-        <button type="button" class="header-btn btn">Online-booking</button>
+        <button type="button" class="header-btn btn" data-modal-open>Online-booking</button>
       </div>
     </header>
 
@@ -114,11 +114,11 @@
               the same wave" with clients. Therefore, we are always ready to
               improve everyone who comes to us!
             </p>
-            <button type="button" class="about-btn btn">Online-booking</button>
+            <button type="button" class="about-btn btn" data-modal-open>Online-booking</button>
           </div>
         </div>
       </section>
-    </body>
+    
   
     <!--PRICES-->
     <section class="prices">
@@ -163,7 +163,7 @@
             </tr>
           </table>
         </div>
-        <button type="button" class="dark-btn btn">Online-booking</button>
+        <button type="button" class="dark-btn btn" data-modal-open>Online-booking</button>
       </div>
     </section>
   
@@ -473,6 +473,20 @@
       </div>
     </section>
   </footer> 
+
+  <!-- Modal window -->
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button type="button" class="btn-cls" data-modal-close>
+        <svg width="8" height="8">
+          <use href="./images/sprite.svg#icon-close-black"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <script src="./js/modal.js"></script>
+  </body>
 
 
 </html>
