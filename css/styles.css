@@ -653,13 +653,70 @@ padding-top: 9px;
     display: flex;
 }
 
-.booking,
-.contacts {
+.booking {
     flex-grow: 1;
 }
 
 .btn-send {
     margin: 0;
+}
+
+.book-form {
+    display: flex;
+    flex-flow: wrap;
+    column-gap: 30px;
+    row-gap: 44px;
+}
+
+.book-label {
+    position: relative;
+}
+
+.label-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(157, 164, 189, 0.4);
+    transition: 500ms;
+}
+
+
+
+.book-input {
+    width: 270px;
+    height: 24px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+    color: #FFFFFF;
+    transition: 500ms;
+}
+
+.book-text {
+    resize: none;
+    width: 570px;
+    height: 76px;
+}
+
+.book-input:focus {
+        border-color: #FFFFFF;
+        outline: none;
+}
+
+.book-input:focus + .label-text,
+.book-input:not(:placeholder-shown) + .label-text {
+    color: #fff;
+    transform: translateY(-20px);
+}
+
+.contacts {
+    width: 785px;
+    padding-right: 100px;
 }
 
 address {
@@ -807,7 +864,7 @@ color: var(--title-and-dark-button);
     left: 50%;
     transform: translate(-50%, -50%);
     width: 600px;
-    height: 400px;
+    padding: 60px 40px;
     border-radius: 5px;
     background-color: #fff;
 }
@@ -840,4 +897,44 @@ color: var(--title-and-dark-button);
 .btn-cls:focus {
     background-color: #fff;
     border: 1px solid #FF6C00;
+}
+
+.modal-label {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+}
+
+.modal-input {
+    width: 100%;
+    height: 40px;
+    padding: 8px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.modal-comment-input {
+    height: 100px;
+    resize: none;
+}
+
+.modal-input:focus {
+    border: 1px solid blueviolet;
+    outline: none;
+}
+
+.modal-check {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+
+.modal-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+        color: var(--title-and-dark-button);
 }

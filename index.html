@@ -114,7 +114,7 @@
               the same wave" with clients. Therefore, we are always ready to
               improve everyone who comes to us!
             </p>
-            <button type="button" class="about-btn btn" data-modal-open>Online-booking</button>
+            <button type="button" class="about-btn btn">Online-booking</button>
           </div>
         </div>
       </section>
@@ -163,7 +163,7 @@
             </tr>
           </table>
         </div>
-        <button type="button" class="dark-btn btn" data-modal-open>Online-booking</button>
+        <button type="button" class="dark-btn btn">Online-booking</button>
       </div>
     </section>
   
@@ -418,7 +418,18 @@
       <div class="contacts-cntnr container">
         <div class="booking">
           <h2 class="dark-title secondary-title">Online-booking</h2>
-          <button type="button" class="btn-send dark-btn btn">send</button> 
+          <form action="" class="book-form">
+            <label class="book-label">
+              <input type="text" class="book-input" name="name" placeholder=" " required><span class="label-text">Name*</span >
+            </label>
+            <label class="book-label">
+              <input type="tel" class="book-input" name="phone" placeholder=" " required><span class="label-text">Phone*</span >
+            </label>
+            <label class="book-label">
+              <textarea name="comment" class="book-text book-input" placeholder=" "></textarea> <span class="label-text">Message</span >
+            </label>
+            <button type="submit" class="btn-send dark-btn btn">send</button> 
+          </form>
         </div>
         <div class="contacts">
           <h2 class="dark-title secondary-title">Contacts</h2>
@@ -482,6 +493,20 @@
           <use href="./images/sprite.svg#icon-close-black"></use>
         </svg>
       </button>
+    
+    <form>
+      <label class="modal-label">Name<input type="text" class="modal-input" name="name" required minlength="2"></label>
+      <label class="modal-label">Mobile phone<input type="tel" class="modal-input" name="phone" required pattern="[0-9]{10}" title="**********"></label>
+      <label class="modal-label">E-mail<input type="email" class="modal-input" name="email"></label>
+      <label class="modal-label">Select a date and time<input type="datetime-local" class="modal-input" name="date-time" min="2023-03-01T00:00" max="2023-12-01T00:00" required></label>
+
+      <label class="modal-label">Comment<textarea name="comment" class="modal-input modal-comment-input"></textarea></label>
+
+      <label class="modal-label"><input type="checkbox" class="modal-check" required>I accept the terms and conditions of the
+              Privacy Policy</label>
+      <button type="submit" class="btn modal-btn">Send</button>
+
+    </form>
     </div>
   </div>
 
