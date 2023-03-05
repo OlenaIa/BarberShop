@@ -115,7 +115,6 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #55555525;
 }
 
 .logo-svg {
@@ -425,11 +424,132 @@ img {
     .btn-cntnr {
         display: none;
     }
+
+    .hero {
+        padding-top: 208px;
+        padding-bottom: 209px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 480px;
+        max-height: 580px;
+        background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url("../images/hero-mobile.jpg");
+        background-color: gray;
+        background-size: cover;
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+        background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url("../images/hero-mobile@2x.jpg");        }
+    }
 }
 
 /* ++++++++++ Tablet ++++++++++ */
 
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+    .hero-cntnr {
+        display: flex;
+        }
+
+    .hero-net-menu-overlay {
+        position: relative;
+        width: 88px;
+        margin-right: 29px;
+    }
+
+    .net-menu {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .hero-net-menu {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform-origin: center left;
+        transform: translatey(50%) rotate(-90deg);
+    }
+
+    .net-item:first-child {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .net-item:first-child::before {
+        content: '';
+        width: 60px;
+        height: 1px;
+        background-color: var(--title-and-dark-button);
+    }
+
+    .net-item a {
+        display: block;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .net-menu a {
+        color: var(--title-and-dark-button);
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 1.36;
+        letter-spacing: 0.2em;
+
+        transition: color 500ms;
+    }
+
+    .net-menu a:hover,
+    .net-menu a:focus {
+        color: var(--accent-color);
+    }
+
+    .ttl-hero-cntnr {
+        position: relative;
+        max-width: 573px;
+        max-height: 680px;
+        background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url("../images/hero-tablet.jpg");
+        background-color: gray;
+        background-size: cover;
+        padding-top: 272px;
+        padding-bottom: 49px;
+        padding-left: 98px;
+        flex-grow: 1;
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .ttl-hero-cntnr {
+        background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url("../images/hero-tablet@2x.jpg");        }
+    }
+
+    /* .ttl-hero-cntnr::before {
+        position: absolute;
+        top: calc(50% + 1px);
+        right: 20px;
+        content: "";
+        display: block;
+        width: 8px;
+        height: 2px;
+        background-color: #9DA4BD;
+    }
+
+    .ttl-hero-cntnr::after {
+        position: absolute;
+        top: calc(50% + 13px);
+        right: 20px;
+        content: "";
+        display: block;
+        width: 8px;
+        height: 2px;
+        background-color: #9DA4BD;
+    } */
+}
 
 /* ++++++++++ Desktop ++++++++++ */
 
@@ -438,7 +558,54 @@ img {
         font-size: 72px;
         line-height: 1.18;
         }
-}
+
+    .hero-net-menu-overlay {
+        width: 155px;
+    }
+
+    .hero-net-menu {
+        left: 34.5px;
+    }
+
+    .ttl-hero-cntnr {
+        max-width: 1070px;
+        max-height: 680px;
+        background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url("../images/hero-desktop.jpg");
+        background-size: cover;
+        padding-left: 100px;
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .ttl-hero-cntnr {
+            background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url("../images/hero-desktop@2x.jpg");
+        }
+    }
+    
+        /* .ttl-hero-cntnr::before {
+            position: absolute;
+            top: calc(50% + 1px);
+            right: 20px;
+            content: "";
+            display: block;
+            width: 8px;
+            height: 2px;
+            background-color: #9DA4BD;
+        }
+    
+        .ttl-hero-cntnr::after {
+            position: absolute;
+            top: calc(50% + 13px);
+            right: 20px;
+            content: "";
+            display: block;
+            width: 8px;
+            height: 2px;
+            background-color: #9DA4BD;
+        } */
+    }
 
 /* .hero {
     padding-top: 184px;
@@ -446,95 +613,11 @@ img {
      
 } */
 
-/* .hero-cntnr {
-    display: flex;
-}
-
-.hero-net-menu-overlay {
-    position: relative;
-    width: 155px;
-}
+/* 
 
 
-.net-menu {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-}
 
-.hero-net-menu {
-    position: absolute;
-    bottom: 0;
-    left: 34.5px;
-    transform-origin: center left;
-    transform: translatey(50%) rotate(-90deg);
-}
 
-.net-item:first-child {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-}
-
-.net-item:first-child::before {
-    content: '';
-    width: 60px;
-    height: 1px;
-    background-color: var(--title-and-dark-button);
-}
-
-.net-item a {
-    display: block;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-.net-menu a {
-    color: var(--title-and-dark-button);
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 1.36;
-    letter-spacing: 0.2em;
-
-    transition: color 500ms;
-}
-
-.net-menu a:hover,
-.net-menu a:focus {
-    color: var(--accent-color);
-}
-
-.ttl-btn-cntnr {
-    position: relative;
-    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url("../images/hero.jpg");
-    background-color: gray;
-    padding-top: 272px;
-    padding-bottom: 49px;
-    padding-left: 100px;
-    flex-grow: 1;
-}
-
-.ttl-btn-cntnr::before {
-    position: absolute;
-    top: calc(50% + 1px);
-    right: 20px;
-    content: "";
-    display: block;
-    width: 8px;
-    height: 2px;
-    background-color: #9DA4BD;
-}
-
-.ttl-btn-cntnr::after {
-    position: absolute;
-    top: calc(50% + 13px);
-    right: 20px;
-    content: "";
-    display: block;
-    width: 8px;
-    height: 2px;
-    background-color: #9DA4BD;
-}
 
 .ttl-cntnr {
     margin-bottom: 144px;
