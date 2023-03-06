@@ -85,6 +85,7 @@ img {
     height: 40px;
     padding: 12px 20px;
     border: 1px solid var(--accent-color);
+    background-color: transparent;
     border-radius: 25px;
     font-family: inherit;
     font-weight: 600;
@@ -238,7 +239,6 @@ img {
         margin-bottom: 64px;
         width: 194px;
         color: var(--title-and-dark-button);
-        background-color: transparent;
     }
     
     .mobile-net-menu {
@@ -408,8 +408,8 @@ img {
 
 .sub-text {
     font-weight: 400;
-    font-size: 18px;
-    line-height: 1.67;
+    font-size: 16px;
+    line-height: 1.63;
     letter-spacing: 0.02em;
 }
 
@@ -467,10 +467,10 @@ img {
 
     .hero-net-menu {
         position: absolute;
-        bottom: 0;
+        bottom: 40px;
         left: 50%;
         transform-origin: center left;
-        transform: translatey(50%) rotate(-90deg);
+        transform: translateY(50%) rotate(-90deg);
     }
 
     .net-item:first-child {
@@ -548,7 +548,59 @@ img {
         width: 8px;
         height: 2px;
         background-color: #9DA4BD;
-    } */
+    }
+        .ttl-cntnr::before {
+            position: absolute;
+            top: calc(50% - 13px);
+            right: 20px;
+            content: "";
+            display: block;
+            width: 18px;
+            height: 2px;
+            background-color: #fff;
+        } */
+
+    .ttl-cntnr {
+        margin-bottom: 173px;
+    }
+
+    .sub-text {
+        font-size: 18px;
+        line-height: 1.67;
+    }
+
+    .btn-cntnr {
+        display: flex;
+    }
+
+    .back-and-forward {
+        display: flex;
+        gap: 64px;
+        align-items: center;
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+    .bf-link::after {
+        content: '';
+        width: 60px;
+        height: 1px;
+        display: block;
+        margin-top: 8px;
+        background-color: rgba(157, 164, 189, 0.6);
+    }
+
+    .bf-link {
+        color: var(--header-title-button-text-dark-section);
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 1.36;
+        letter-spacing: 0.1em;
+    }
+
+    .bf-item:last-child {
+        text-align: end;
+    }
 }
 
 /* ++++++++++ Desktop ++++++++++ */
@@ -560,7 +612,8 @@ img {
         }
 
     .hero-net-menu-overlay {
-        width: 155px;
+        width: 100px;
+        margin-right: 0;
     }
 
     .hero-net-menu {
@@ -584,116 +637,12 @@ img {
         }
     }
     
-        /* .ttl-hero-cntnr::before {
-            position: absolute;
-            top: calc(50% + 1px);
-            right: 20px;
-            content: "";
-            display: block;
-            width: 8px;
-            height: 2px;
-            background-color: #9DA4BD;
-        }
-    
-        .ttl-hero-cntnr::after {
-            position: absolute;
-            top: calc(50% + 13px);
-            right: 20px;
-            content: "";
-            display: block;
-            width: 8px;
-            height: 2px;
-            background-color: #9DA4BD;
-        } */
+    .ttl-cntnr {
+        margin-bottom: 144px;
     }
-
-/* .hero {
-    padding-top: 184px;
-    padding-bottom: 49px;
-     
-} */
-
-/* 
-
-
-
-
-
-.ttl-cntnr {
-    margin-bottom: 144px;
 }
-
-.ttl-cntnr::before {
-    position: absolute;
-    top: calc(50% - 13px);
-    right: 20px;
-    content: "";
-    display: block;
-    width: 18px;
-    height: 2px;
-    background-color: #fff;
-}
-
-
-
-
-
-.btn-cntnr {
-    display: flex;
-}
-
-.back-and-forward {
-    display: flex;
-    gap: 64px;
-    align-items: center;
-    margin-left: auto;
-    margin-right: 20px;
-}
-
-.bf-link::after {
-    content: '';
-    width: 60px;
-    height: 1px;
-    display: block;
-    margin-top: 8px;
-    background-color: rgba(157, 164, 189, 0.6);
-}
-
-.bf-link {
-    color: var(--header-title-button-text-dark-section);
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 1.36;
-    letter-spacing: 0.1em;
-}
-
-.bf-item:last-child {
-    text-align: end;
-} */
 
 /* ======= ABOUT ======== */
-
-/* .about {
-    padding-top: 120px;
-    padding-bottom: 120px;
-}
-
-.about-cntnr {
-    display: flex;
-}
-
-.about-list {
-    display: flex;
-    margin-right: 30px;
-}
-
-.about-list li:not(:last-child) {
-    margin-right: 30px;
-}
-
-.about-content {
-    margin-right: 100px;
-}
 
 .about-sup {
     color: var(--title-and-dark-button);
@@ -704,8 +653,8 @@ img {
     color: var(--title-and-dark-button);
     font-style: var(--title-text-font);
     font-weight: 700;
-    font-size: 42px;
-    line-height: 1.17;
+    font-size: 28px;
+    line-height: 1.18;
     letter-spacing: 0.05em;
 }
 
@@ -715,7 +664,7 @@ img {
 }
 
 .text {
-    margin-bottom: 42px;
+    margin-bottom: 40px;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.86;
@@ -725,9 +674,92 @@ img {
 
 .about-btn {
     color: var(--title-and-dark-button);
-} */
+}
+
+/* ++++++++++ Phone ++++++++++ */
+
+@media screen and (max-width: 767px){
+    .about-list {
+        display: none;
+    }
+
+    .about {
+        padding-top: 84px;
+        padding-bottom: 84px;
+    }
+
+    .secondary-title {
+        max-width: 306px;
+    }
+   
+}
+
+/* ++++++++++ Tablet ++++++++++ */
+
+@media screen and (min-width: 768px) {
+    .about {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .about-cntnr {
+        display: flex;
+        gap: 30px;
+    }
+
+    .about-list li:first-child {
+        margin-bottom: 30px;
+    }
+
+    .text {
+        margin-bottom: 77px;
+    }
+}
+
+/* ++++++++++ Desktop ++++++++++ */
+
+@media screen and (min-width: 1200px) {
+    .about {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    .about-content {
+        margin-right: 100px;
+    }
+
+    .about-list {
+        display: flex;
+        gap: 30px;
+    }
+
+    .about-list li:first-child {
+        margin-bottom: 0;
+    }
+
+    .secondary-title {
+        font-size: 42px;
+        line-height: 1.17;
+    }
+
+    .text {
+        margin-bottom: 42px;
+    }
+}
 
 /* ====== PRICES ======== */
+
+/* ++++++++++ Phone ++++++++++ */
+
+@media screen and (max-width: 767px) {}
+
+/* ++++++++++ Tablet ++++++++++ */
+
+@media screen and (min-width: 768px) {}
+
+/* ++++++++++ Desktop ++++++++++ */
+
+@media screen and (min-width: 1200px) {}
 
 /* .prices {
     padding-top: 120px;
@@ -797,6 +829,18 @@ td:last-child {
 } */
 
 /* ====== WHY WE ======= */
+
+/* ++++++++++ Phone ++++++++++ */
+
+@media screen and (max-width: 767px) {}
+
+/* ++++++++++ Tablet ++++++++++ */
+
+@media screen and (min-width: 768px) {}
+
+/* ++++++++++ Desktop ++++++++++ */
+
+@media screen and (min-width: 1200px) {}
 
 /* .why {
     padding-top: 120px;
@@ -871,6 +915,18 @@ padding-top: 9px;
 } */
 
 /* ========= TEAM ======== */
+
+/* ++++++++++ Phone ++++++++++ */
+
+@media screen and (max-width: 767px) {}
+
+/* ++++++++++ Tablet ++++++++++ */
+
+@media screen and (min-width: 768px) {}
+
+/* ++++++++++ Desktop ++++++++++ */
+
+@media screen and (min-width: 1200px) {}
 
 /* .team {
     padding-top: 120px;
@@ -948,6 +1004,18 @@ padding-top: 9px;
 
 /* ====== PORTFOLIO ====== */
 
+/* ++++++++++ Phone ++++++++++ */
+
+@media screen and (max-width: 767px) {}
+
+/* ++++++++++ Tablet ++++++++++ */
+
+@media screen and (min-width: 768px) {}
+
+/* ++++++++++ Desktop ++++++++++ */
+
+@media screen and (min-width: 1200px) {}
+
 /* .portfolio {
     padding-top: 120px;
     padding-bottom: 120px;
@@ -969,6 +1037,18 @@ padding-top: 9px;
 } */
 
 /* =========== BOOKING & CONTACTS ============= */
+
+/* ++++++++++ Phone ++++++++++ */
+
+@media screen and (max-width: 767px) {}
+
+/* ++++++++++ Tablet ++++++++++ */
+
+@media screen and (min-width: 768px) {}
+
+/* ++++++++++ Desktop ++++++++++ */
+
+@media screen and (min-width: 1200px) {}
 
 /* .booking-contacts {
     max-width: 1600px;
@@ -1116,6 +1196,18 @@ a.email {
 
 /* ============= FOOTER ============= */
 
+/* ++++++++++ Phone ++++++++++ */
+
+@media screen and (max-width: 767px) {}
+
+/* ++++++++++ Tablet ++++++++++ */
+
+@media screen and (min-width: 768px) {}
+
+/* ++++++++++ Desktop ++++++++++ */
+
+@media screen and (min-width: 1200px) {}
+
 /* .footer {
     padding-top: 56px;
     padding-bottom: 56px;
@@ -1172,6 +1264,18 @@ color: var(--title-and-dark-button);
 } */
 
 /* ========== Modal Window ============ */
+
+/* ++++++++++ Phone ++++++++++ */
+
+@media screen and (max-width: 767px) {}
+
+/* ++++++++++ Tablet ++++++++++ */
+
+@media screen and (min-width: 768px) {}
+
+/* ++++++++++ Desktop ++++++++++ */
+
+@media screen and (min-width: 1200px) {}
 
 /* .backdrop {
     position: fixed;

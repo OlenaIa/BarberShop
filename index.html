@@ -128,27 +128,39 @@
       </section>
   
       <!--ABOUT-->
-      <!-- <section class="about">
+      <section class="about">
         <div class="about-cntnr container">
           <ul class="about-list list">
             <li>
-              <img
-                src="./images/barba.jpg"
-                alt="Beard"
-                width="270"
-                height="445"
-              />
+              <picture>
+                    <source
+                      srcset="./images/barba-desktop.jpg 1x, ./images/barba-desktop@2x.jpg 2x"
+                      media="(min-width: 1200px)"/>
+                    <source
+                      srcset="./images/barba-tablet.jpg 1x, ./images/barba-tablet@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <img src="./images/barba-tablet.jpg" alt="Beard" />
+                  </picture>
             </li>
             <li>
-              <img src="./images/hair.jpg" alt="Hair" width="270" height="445" />
-            </li>
+              <picture>
+                    <source
+                      srcset="./images/hair-desktop.jpg 1x, ./images/hair-desktop@2x.jpg 2x"
+                      media="(min-width: 1200px)"/>
+                    <source
+                      srcset="./images/hair-tablet.jpg 1x, ./images/hair-tablet@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <img src="./images/hair-tablet.jpg" alt="Hair" />
+                  </picture>            
+                </li>
           </ul>
           <div class="about-content">
             <p class="about-sup sup-text">About</p>
             <h2 class="secondary-title">Best Barbershop in your city</h2>
             <p class="about-sub sub-text">
-              If you want to add more confidence to your image, you should
-              definitely visit us.
+              If you want to add more confidence to your image, you should visit us
             </p>
             <p class="text">
               We are a team that never stops at what has been achieved and are
@@ -160,7 +172,7 @@
             <button type="button" class="about-btn btn">Online-booking</button>
           </div>
         </div>
-      </section>-->
+      </section>
     
   
     <!--PRICES-->
