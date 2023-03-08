@@ -128,7 +128,7 @@
       </section>
   
       <!--ABOUT-->
-      <section class="about">
+      <section class="section">
         <div class="about-cntnr container">
           <ul class="about-list list">
             <li>
@@ -158,7 +158,7 @@
           </ul>
           <div class="about-content">
             <p class="about-sup sup-text">About</p>
-            <h2 class="secondary-title">Best Barbershop in your city</h2>
+            <h2 class="secondary-title about-ttl">Best Barbershop in your city</h2>
             <p class="about-sub sub-text">
               If you want to add more confidence to your image, you should visit us
             </p>
@@ -176,12 +176,12 @@
     
   
     <!--PRICES-->
-    <!-- <section class="prices">
+    <section class="prices section">
       <div class="container">
         <p class="prices-sup sup-text">Spend your time with the best masters</p>
-        <h2 class="dark-title secondary-title">Services and prices</h2>
+        <h2 class="dark-title prices-ttl secondary-title">Services and prices</h2>
         <div class="tables">
-          <table class="prices-table sub-text">
+          <table class="prices-table sub-text sub-text-mobile">
             <tr>
               <td>Men’s haircut</td>
               <td>from 300 uah.</td>
@@ -195,11 +195,11 @@
               <td>from 200 uah.</td>
             </tr>
             <tr>
-              <td>Straight razor shave</td>
-              <td>from 200 uah.</td>
+              <td class="last-row">Straight razor shave</td>
+              <td class="last-row">from 200 uah.</td>
             </tr>
           </table>
-          <table class="prices-table sub-text">
+          <table class="prices-table sub-text sub-text-mobile">
             <tr>
               <td>Trainee’s haircut</td>
               <td>from 50 uah.</td>
@@ -213,18 +213,26 @@
               <td>from 300 uah.</td>
             </tr>
             <tr>
-              <td>Camouflage of gray hair</td>
-              <td>from 200 uah.</td>
+              <td class="last-row">Camouflage of gray hair</td>
+              <td class="last-row">from 200 uah.</td>
             </tr>
           </table>
         </div>
         <button type="button" class="dark-btn btn">Online-booking</button>
       </div>
-    </section> --> 
+    </section>
   
     <!--WHY WE-->
-    <!-- <section class="why">
+    <section class="section">
       <div class="why-cntnr container">
+        <div class="why-content">
+          <p class="why-sup sup-text">Old traditional school</p>
+          <h2 class="secondary-title">¿Why people come to us?</h2>
+          <p class="why-sub sub-text">
+            Only good things are said about us. But it's better to see and feel 1
+            time than read 10 times.
+          </p>
+        </div>
         <ul class="why-list list">
           <li>
             <p class="number">600</p>
@@ -244,30 +252,30 @@
             <p class="descrip">Gifts for regular customers</p>
           </li>
         </ul>
-        <div class="why-content">
-          <p class="why-sup sup-text">Old traditional school</p>
-          <h2 class="secondary-title">¿Why people come to us?</h2>
-          <p class="why-sub sub-text">
-            Only good things are said about us. But it's better to see and feel 1
-            time than read 10 times.
-          </p>
-        </div>
       </div>
-    </section> -->
+    </section>
   
     <!--TEAM-->
-    <!-- <section class="team">
+    <section class="team section">
       <div class="container">
         <p class="team-sup sup-text">For true enjoyers of the atmosphere</p>
         <h2 class="team-ttl secondary-title">Our barbers</h2>
         <ul class="team-list list">
           <li>
-            <img
-              src="./images/john.jpg"
-              alt="John Smith"
-              width="370"
-              height="346"
-            />
+            <picture>
+              <source
+                srcset="./images/john-desktop.jpg 1x, ./images/john-desktop@2x.jpg 2x"
+                media="(min-width: 1200px)"/>
+              <source
+                srcset="./images/john-tablet.jpg 1x, ./images/john-tablet@2x.jpg 2x"
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="./images/john-mobile.jpg 1x, ./images/john-mobile@2x.jpg 2x"
+                media="(min-width: 768px)"
+              />
+              <img src="./images/john-mobile.jpg" alt="John Smith" />
+            </picture>
             <div class="team-content">
               <h3 class="third-title">John Smith</h3>
               <p class="team-desc">Extreme Barber</p>
@@ -316,12 +324,20 @@
             </div>
           </li>
           <li>
-            <img
-              src="./images/michele.jpg"
-              alt="Michele Doe"
-              width="370"
-              height="346"
-            />
+            <picture>
+              <source
+                srcset="./images/michele-desktop.jpg 1x, ./images/michele-desktop@2x.jpg 2x"
+                media="(min-width: 1200px)"/>
+              <source
+                srcset="./images/michele-tablet.jpg 1x, ./images/michele-tablet@2x.jpg 2x"
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="./images/michele-mobile.jpg 1x, ./images/michele-mobile@2x.jpg 2x"
+                media="(min-width: 768px)"
+              />
+              <img src="./images/michele-mobile.jpg" alt="Michele Doe" />
+            </picture>            
             <div class="team-content">
               <h3 class="third-title">Michele Doe</h3>
               <p class="team-desc">Extreme Barber</p>
@@ -370,12 +386,20 @@
             </div>
           </li>
           <li>
-            <img
-              src="./images/alan.jpg"
-              alt="Alan Black"
-              width="370"
-              height="346"
-            />
+            <picture>
+              <source
+                srcset="./images/alan-desktop.jpg 1x, ./images/alan-desktop@2x.jpg 2x"
+                media="(min-width: 1200px)"/>
+              <source
+                srcset="./images/alan-tablet.jpg 1x, ./images/alan-tablet@2x.jpg 2x"
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="./images/alan-mobile.jpg 1x, ./images/alan-mobile@2x.jpg 2x"
+                media="(min-width: 768px)"
+              />
+              <img src="./images/alan-mobile.jpg" alt="Alan Black" />
+            </picture>            
             <div class="team-content">
               <h3 class="third-title">Alan Black</h3>
               <p class="team-desc">Extreme Barber</p>
@@ -425,7 +449,7 @@
           </li>
         </ul>
       </div>
-    </section> -->
+    </section>
   
     <!--PORTFOLIO-->
     <!-- <section class="portfolio">
