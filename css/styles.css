@@ -1069,29 +1069,9 @@ td:last-child {
     margin-bottom: 44px;
 }
 
-/* ++++++++++ Phone ++++++++++ */
-
-@media screen and (max-width: 767px) {}
-
-/* ++++++++++ Tablet ++++++++++ */
-
-@media screen and (min-width: 768px) {}
-
-/* ++++++++++ Desktop ++++++++++ */
-
-@media screen and (min-width: 1200px) {
-    .team-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-    }
-
-    .team-list>li {
-        flex-basis: calc((100% - 2*30px) / 3);
-    }
+.team-list li:not(:last-child) {
+    margin-bottom: 64px;
 }
-
-/* 
 
 .team-content {
     padding-top: 30px;
@@ -1122,14 +1102,12 @@ td:last-child {
     gap: 10px;
 }
 
-.team-net-item
-
 .team-net-link {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 44px;
-    height: 44px; 
+    height: 44px;
     background-color: var(--main-background-color);
     border-radius: 50%;
 }
@@ -1141,85 +1119,85 @@ td:last-child {
 
 .team-net-link:is(:hover, :focus) .net-icon {
     fill: var(--accent-color);
-} */
+}
+
+/* ++++++++++ Tablet ++++++++++ */
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .team-container {
+    width: 480px;
+    }
+}
+
+/* ++++++++++ Desktop ++++++++++ */
+
+@media screen and (min-width: 1200px) {
+    .team-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .team-list>li {
+        flex-basis: calc((100% - 2*30px) / 3);
+    }
+
+    .team-list li:not(:last-child) {
+        margin-bottom: 0;
+    }
+}
 
 /* ====== PORTFOLIO ====== */
 
-/* ++++++++++ Phone ++++++++++ */
-
-@media screen and (max-width: 767px) {}
-
-/* ++++++++++ Tablet ++++++++++ */
-
-@media screen and (min-width: 768px) {}
-
-/* ++++++++++ Desktop ++++++++++ */
-
-@media screen and (min-width: 1200px) {}
-
-/* .portfolio {
-    padding-top: 120px;
-    padding-bottom: 120px;
-}
-
 .portf-sup {
-    margin-bottom: 44px;
     color: var(--title-and-dark-button);
 }
 
-.portf-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-.portf-list li {
-    flex-basis: calc((100% - 4*30px) / 4);
-} */
-
-/* =========== BOOKING & CONTACTS ============= */
-
 /* ++++++++++ Phone ++++++++++ */
 
-@media screen and (max-width: 767px) {}
+@media screen and (max-width: 767px) {
+    .portf-sup {
+        margin-bottom: 71px;
+    }
+
+    .portf-list li:not(:last-child) {
+        margin-bottom: 30px;
+    }
+}
 
 /* ++++++++++ Tablet ++++++++++ */
 
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+    .portf-sup {
+        margin-bottom: 44px;
+    }
+
+    .portf-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .portf-list li {
+        flex-basis: calc((100% - 1*30px) / 2);
+    }
+}
 
 /* ++++++++++ Desktop ++++++++++ */
 
-@media screen and (min-width: 1200px) {}
+@media screen and (min-width: 1200px) {
+    .portf-list li {
+        flex-basis: calc((100% - 4*30px) / 4);
+    }
+}
 
-/* .booking-contacts {
-    max-width: 1600px;
+/* =========== BOOKING & CONTACTS ============= */
+
+.booking-contacts {
     margin: 0 auto;
-    background-image: url(../images/address.png);
     background-color: #191C26;
     background-repeat: no-repeat;
-    background-position: 100% 0%;
-    padding-top: 130px;
-    padding-bottom: 120px;
-    
-}
-
-.contacts-cntnr {
-    display: flex;
-}
-
-.booking {
-    flex-grow: 1;
-}
-
-.btn-send {
-    margin: 0;
-}
-
-.book-form {
-    display: flex;
-    flex-flow: wrap;
-    column-gap: 30px;
-    row-gap: 44px;
+    background-size: contain;
+    background-position: 0% 100%;
 }
 
 .book-label {
@@ -1239,10 +1217,7 @@ td:last-child {
     transition: 500ms;
 }
 
-
-
 .book-input {
-    width: 270px;
     height: 24px;
     background-color: transparent;
     border: none;
@@ -1253,20 +1228,128 @@ td:last-child {
 
 .book-text {
     resize: none;
-    width: 570px;
     height: 76px;
 }
 
 .book-input:focus {
-        border-color: #FFFFFF;
-        outline: none;
+    border-color: #FFFFFF;
+    outline: none;
 }
 
-.book-input:focus + .label-text,
-.book-input:not(:placeholder-shown) + .label-text {
+.book-input:focus+.label-text,
+.book-input:not(:placeholder-shown)+.label-text {
     color: #fff;
     transform: translateY(-20px);
 }
+
+/* ++++++++++ Phone ++++++++++ */
+
+@media screen and (max-width: 767px) {
+    .booking-contacts {
+        max-width: 480px;
+        background-image: url("../images/address-mobile.png");
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .booking-contacts {
+            background-image: url("../images/address-mobile@2x.png");
+        }
+    }
+
+    .book-label:not(:last-child) {
+        display: block;
+        margin-bottom: 44px;
+    }
+
+    .book-input {
+        width: 100%;
+    }
+
+    .book-text {
+        width: 100%;
+    }
+}
+
+/* ++++++++++ Tablet ++++++++++ */
+
+@media screen and (min-width: 768px) {
+    .booking-contacts {
+        max-width: 768px;
+        background-image: url("../images/address-tablet.png");
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .booking-contacts {
+            background-image: url("../images/address-tablet@2x.png");
+        }
+    }
+
+    .book-form {
+        display: flex;
+        flex-flow: wrap;
+        column-gap: 30px;
+        row-gap: 44px;
+    }
+
+    .book-input {
+        width: 330px;
+    }
+
+    .book-text {
+        width: 690px;
+    }
+}
+
+/* ++++++++++ Desktop ++++++++++ */
+
+@media screen and (min-width: 1200px) {
+    .booking-contacts {
+        max-width: 1600px;
+        background-image: url("../images/address-desktop.png");
+        background-position: 100% 0%;
+        padding-top: 130px;
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .booking-contacts {
+            background-image: url("../images/address-desktop@2x.png");
+        }
+    }
+
+    .contacts-cntnr {
+        display: flex;
+    }
+
+    .booking {
+        flex-grow: 1;
+    }
+
+    .book-input {
+        width: 270px;
+    }
+
+    .book-text {
+        width: 570px;
+    }
+}
+
+/* 
+.btn-send {
+    margin: 0;
+}
+
+
+
+
 
 .contacts {
     width: 785px;
